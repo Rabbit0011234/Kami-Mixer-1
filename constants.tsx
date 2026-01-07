@@ -76,7 +76,7 @@ export const generateMockPortfolio = (category: PortfolioCategory): PortfolioIte
     let videoUrl = 'https://www.youtube.com/embed/jfKfPfyJRdk'; 
     let thumbnail = `https://picsum.photos/seed/${category}-${i}/800/450`;
     
-    // Set the specific project for Arrangement Work #1 as requested
+    // Set the specific project for Arrangement Work #1
     if (category === PortfolioCategory.ARRANGEMENT && i === 0) {
       title = "【ภาษาไทย】Connecting / halyosy【Happy New Year 2026】";
       videoUrl = "https://www.youtube.com/embed/G3QM2tKjhKQ";
@@ -88,6 +88,20 @@ export const generateMockPortfolio = (category: PortfolioCategory): PortfolioIte
       title = "Empty old City - Daisy Crown (Thai Ver.) / covered by RLanz";
       videoUrl = "https://www.youtube.com/embed/7YKIhGm9av8";
       thumbnail = "https://img.youtube.com/vi/7YKIhGm9av8/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #3
+    if (category === PortfolioCategory.ARRANGEMENT && i === 2) {
+      title = "【ORIGINAL SONG】Today Is For You - NEBUEL";
+      videoUrl = "https://www.youtube.com/embed/ilvtdVs_VsE";
+      thumbnail = "https://img.youtube.com/vi/ilvtdVs_VsE/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #4 as requested
+    if (category === PortfolioCategory.ARRANGEMENT && i === 3) {
+      title = "NONT TANONT - คืนที่หมาเต็มวัด ft.Singto Numchok Covered by Aki X Bishamon【 Cover Song 】🔥🐈‍⬛";
+      videoUrl = "https://www.youtube.com/embed/GHxLr75Wv9U";
+      thumbnail = "https://img.youtube.com/vi/GHxLr75Wv9U/maxresdefault.jpg";
     }
 
     return {

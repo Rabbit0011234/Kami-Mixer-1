@@ -32,14 +32,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
       <motion.div 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass rounded-full px-8 py-3 flex items-center justify-between w-full max-w-5xl border border-slate-200/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] pointer-events-auto"
+        className="glass rounded-full px-8 py-2 flex items-center justify-between w-full max-w-5xl border border-slate-200/50 dark:border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.3)] pointer-events-auto"
       >
         <div 
           onClick={onNavigateHome}
-          className="text-xl md:text-2xl font-bold tracking-tighter cursor-pointer hover:opacity-80 transition-opacity flex items-center select-none"
+          className="cursor-pointer hover:opacity-80 transition-all active:scale-95 flex items-center select-none"
         >
-          <span className="font-kanit bg-gradient-to-r from-[#40C9FF] to-[#7b61ff] bg-clip-text text-transparent">Kami</span>
-          <span className="font-zen font-normal text-white ml-1 md:ml-1.5 translate-y-[-2%]">髪</span>
+          <img 
+            src="https://media.discordapp.net/attachments/1299703906699575336/1458477742353027102/1111_00000.png?ex=695fc8be&is=695e773e&hm=9407bba6cfea05373b0fb2dd64f7782dca8b0fb5df45281e4dd0529d4ce6bb3c&=&format=webp&quality=lossless" 
+            alt="Kami髪 Logo" 
+            className="h-8 md:h-11 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -56,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
         </div>
 
         <div className="md:hidden">
-          <button className="text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 bg-white text-black rounded-full active:scale-95 transition-transform">
+          <button className="text-[10px] uppercase tracking-widest font-bold px-5 py-2 bg-white text-black rounded-full active:scale-95 transition-transform shadow-lg">
             Menu
           </button>
         </div>
