@@ -139,11 +139,25 @@ export const generateMockPortfolio = (category: PortfolioCategory): PortfolioIte
       thumbnail = "https://img.youtube.com/vi/ZoD8q6f3pHk/maxresdefault.jpg";
     }
 
-    // Set the specific project for Arrangement Work #10 as requested
+    // Set the specific project for Arrangement Work #10
     if (category === PortfolioCategory.ARRANGEMENT && i === 9) {
-      title = "Haru - 晴る／ヨลシカ【Covered by Shishiou Seito】";
+      title = "Haru - 晴る／ヨルシカ【Covered by Shishiou Seito】";
       videoUrl = "https://www.youtube.com/embed/-IzktNhIlxY";
       thumbnail = "https://img.youtube.com/vi/-IzktNhIlxY/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #11
+    if (category === PortfolioCategory.ARRANGEMENT && i === 10) {
+      title = "【ORIGINAL SONG】คนพิเศษ🩵(Special You) - PufPuf Miruku";
+      videoUrl = "https://www.youtube.com/embed/HshBU5ZTr8E";
+      thumbnail = "https://img.youtube.com/vi/HshBU5ZTr8E/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #12 as requested
+    if (category === PortfolioCategory.ARRANGEMENT && i === 11) {
+      title = "Soda Pard－Soju Boys (Ost. K-Pop Demon Hunters)／Covered by Bishamon🍺🐈‍⬛";
+      videoUrl = "https://www.youtube.com/embed/Q4SinJHZrPM";
+      thumbnail = "https://img.youtube.com/vi/Q4SinJHZrPM/maxresdefault.jpg";
     }
 
     return {
