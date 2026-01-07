@@ -74,7 +74,6 @@ export const Contact: React.FC = () => {
         ))}
       </div>
 
-      {/* Reduced decorative section for a cleaner look */}
       <div className="flex justify-center items-center gap-12 opacity-5 select-none overflow-hidden py-10 pointer-events-none">
         {Array.from({ length: 3 }).map((_, i) => (
           <span key={i} className="text-xl md:text-3xl font-bold tracking-widest whitespace-nowrap">

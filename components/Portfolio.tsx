@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PortfolioCategory } from '../types';
+import { PortfolioCategory } from '../types.ts';
 
 interface PortfolioProps {
   onSelectCategory: (category: PortfolioCategory) => void;

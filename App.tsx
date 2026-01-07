@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Portfolio } from './components/Portfolio';
-import { PortfolioDetail } from './pages/PortfolioDetail';
-import { Pricing } from './components/Pricing';
-import { HowToOrder } from './components/HowToOrder';
-import { Contact } from './components/Contact';
-import { PortfolioCategory } from './types';
+import { Navbar } from './components/Navbar.tsx';
+import { Hero } from './components/Hero.tsx';
+import { Portfolio } from './components/Portfolio.tsx';
+import { PortfolioDetail } from './pages/PortfolioDetail.tsx';
+import { Pricing } from './components/Pricing.tsx';
+import { HowToOrder } from './components/HowToOrder.tsx';
+import { Contact } from './components/Contact.tsx';
+import { PortfolioCategory } from './types.ts';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'home' | 'portfolio'>('home');
