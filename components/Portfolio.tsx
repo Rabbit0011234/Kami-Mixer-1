@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PortfolioCategory } from '../types.ts';
@@ -11,12 +10,12 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectCategory }) => {
   const categories = [
     {
       type: PortfolioCategory.ARRANGEMENT,
-      image: 'https://picsum.photos/seed/arrange/1200/800',
+      image: 'https://media.discordapp.net/attachments/1456110421533790374/1456905903117959282/1_00000.jpg?ex=695f56db&is=695e055b&hm=ba8b63fb6c9bd55ab3a221e30a4dba6c1ffab156b4ccbdc430f96a273da0e3e7&=&format=webp&width=969&height=545',
       description: 'Professional music production and creative arrangements.'
     },
     {
       type: PortfolioCategory.MIXING,
-      image: 'https://picsum.photos/seed/mix/1200/800',
+      image: 'https://cdn.discordapp.com/attachments/1299703906699575336/1458471649732071631/1767797122564.jpg?ex=695fc312&is=695e7192&hm=676764ddc044f48165b8915beee0c249ffb017d6b0e4de7b55f725d3f51c6bf8&',
       description: 'Crystal clear vocal mixing and industry-standard mastering.'
     }
   ];

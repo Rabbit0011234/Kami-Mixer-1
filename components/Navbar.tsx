@@ -32,23 +32,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
       <motion.div 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass rounded-full px-8 py-3.5 flex items-center justify-between w-full max-w-5xl border border-slate-200/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.6)] pointer-events-auto"
+        className="glass rounded-full px-8 py-3 flex items-center justify-between w-full max-w-5xl border border-slate-200/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] pointer-events-auto"
       >
         <div 
           onClick={onNavigateHome}
-          className="text-2xl md:text-3xl font-bold tracking-tight cursor-pointer hover:opacity-80 transition-opacity flex items-center select-none"
+          className="text-xl md:text-2xl font-bold tracking-tighter cursor-pointer hover:opacity-80 transition-opacity flex items-center select-none"
         >
-          <span className="font-kanit bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(14,165,233,0.2)]">Kami</span>
-          <span className="font-zen text-white ml-1 drop-shadow-[0_2px_4px_rgba(255,255,255,0.2)]">髪</span>
+          <span className="font-kanit bg-gradient-to-r from-[#40C9FF] to-[#7b61ff] bg-clip-text text-transparent">Kami</span>
+          <span className="font-zen font-normal text-white ml-1 md:ml-1.5 translate-y-[-2%]">髪</span>
         </div>
         
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-sm font-bold text-white hover:text-sky-300 transition-all duration-300 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]"
+              className="text-xs font-bold text-slate-400 hover:text-white transition-colors duration-300 uppercase tracking-widest"
             >
               {link.name}
             </a>
@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
         </div>
 
         <div className="md:hidden">
-          <button className="text-xs font-bold px-4 py-1.5 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full active:scale-95 transition-transform">
+          <button className="text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 bg-white text-black rounded-full active:scale-95 transition-transform">
             Menu
           </button>
         </div>

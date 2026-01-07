@@ -69,11 +69,28 @@ export const ORDER_STEPS = [
 
 // Mocking 200 items (20 pages * 10 items) for demonstration
 export const generateMockPortfolio = (category: PortfolioCategory) => {
-  return Array.from({ length: 200 }).map((_, i) => ({
-    id: `${category.toLowerCase().replace(' ', '-')}-${i}`,
-    title: `${category} Project #${i + 1}`,
-    thumbnail: `https://picsum.photos/seed/${category}-${i}/800/450`,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
-    category
-  }));
+  return Array.from({ length: 200 }).map((_, i) => {
+    let title = `${category} Project #${i + 1}`;
+    let videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ'; // Placeholder
+    
+    // Set the specific project for Arrangement Work #1
+    if (category === PortfolioCategory.ARRANGEMENT && i === 0) {
+      title = "【ภาษาไทย】Connecting / halyosy【Happy New Year 2026】";
+      videoUrl = "https://www.youtube.com/embed/G3QM2tKjhKQ";
+    }
+
+    // Set the specific project for Arrangement Work #2
+    if (category === PortfolioCategory.ARRANGEMENT && i === 1) {
+      title = "Empty old City - Daisy Crown (Thai Ver.) / covered by RLanz";
+      videoUrl = "https://www.youtube.com/embed/7YKIhGm9av8";
+    }
+
+    return {
+      id: `${category.toLowerCase().replace(' ', '-')}-${i}`,
+      title,
+      thumbnail: `https://picsum.photos/seed/${category}-${i}/800/450`,
+      videoUrl,
+      category
+    };
+  });
 };
