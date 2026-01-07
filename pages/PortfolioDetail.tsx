@@ -53,12 +53,12 @@ export const PortfolioDetail: React.FC<PortfolioDetailProps> = ({ category, onBa
               <iframe
                 src={item.videoUrl}
                 title={item.title}
-                className="absolute inset-0 w-full h-full transition-all duration-500"
+                className="absolute inset-0 w-full h-full transition-all duration-500 grayscale-0 brightness-100 contrast-100"
                 allowFullScreen
               ></iframe>
               <div className="absolute inset-0 pointer-events-none border-2 border-transparent group-hover:border-[#007AFF]/20 rounded-3xl transition-colors"></div>
             </div>
-            <h4 className="mt-4 text-xl font-bold text-slate-800 dark:text-white group-hover:text-[#007AFF] transition-colors">
+            <h4 className="mt-4 text-xl font-bold text-slate-800 dark:text-white group-hover:text-[#007AFF] transition-colors leading-tight">
               {item.title}
             </h4>
           </motion.div>

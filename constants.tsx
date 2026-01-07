@@ -1,5 +1,5 @@
 
-import { PortfolioCategory, PricingCategory } from './types';
+import { PortfolioCategory, PricingCategory, PortfolioItem } from './types';
 
 export const PRICING_DATA: PricingCategory[] = [
   {
@@ -68,27 +68,32 @@ export const ORDER_STEPS = [
 ];
 
 // Mocking 200 items (20 pages * 10 items) for demonstration
-export const generateMockPortfolio = (category: PortfolioCategory) => {
+export const generateMockPortfolio = (category: PortfolioCategory): PortfolioItem[] => {
   return Array.from({ length: 200 }).map((_, i) => {
-    let title = `${category} Project #${i + 1}`;
-    let videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ'; // Placeholder
+    // Default title using "Work" instead of "Project"
+    let title = `${category} Work #${i + 1}`;
+    // Generic Lofi track for placeholders
+    let videoUrl = 'https://www.youtube.com/embed/jfKfPfyJRdk'; 
+    let thumbnail = `https://picsum.photos/seed/${category}-${i}/800/450`;
     
-    // Set the specific project for Arrangement Work #1
+    // Set the specific project for Arrangement Work #1 as requested
     if (category === PortfolioCategory.ARRANGEMENT && i === 0) {
       title = "【ภาษาไทย】Connecting / halyosy【Happy New Year 2026】";
       videoUrl = "https://www.youtube.com/embed/G3QM2tKjhKQ";
+      thumbnail = "https://img.youtube.com/vi/G3QM2tKjhKQ/maxresdefault.jpg";
     }
 
     // Set the specific project for Arrangement Work #2
     if (category === PortfolioCategory.ARRANGEMENT && i === 1) {
       title = "Empty old City - Daisy Crown (Thai Ver.) / covered by RLanz";
       videoUrl = "https://www.youtube.com/embed/7YKIhGm9av8";
+      thumbnail = "https://img.youtube.com/vi/7YKIhGm9av8/maxresdefault.jpg";
     }
 
     return {
-      id: `${category.toLowerCase().replace(' ', '-')}-${i}`,
+      id: `${category.toLowerCase().replace(/\s+/g, '-')}-${i}`,
       title,
-      thumbnail: `https://picsum.photos/seed/${category}-${i}/800/450`,
+      thumbnail,
       videoUrl,
       category
     };
