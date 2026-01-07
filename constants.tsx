@@ -111,6 +111,41 @@ export const generateMockPortfolio = (category: PortfolioCategory): PortfolioIte
       thumbnail = "https://img.youtube.com/vi/tVzMIIyqhX0/maxresdefault.jpg";
     }
 
+    // Set the specific project for Arrangement Work #6
+    if (category === PortfolioCategory.ARRANGEMENT && i === 5) {
+      title = "Chiisana Koi no Uta (MONGOL800) Covered by 【 Hajime Rei 】";
+      videoUrl = "https://www.youtube.com/embed/BTjgM9dmesk";
+      thumbnail = "https://img.youtube.com/vi/BTjgM9dmesk/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #7
+    if (category === PortfolioCategory.ARRANGEMENT && i === 6) {
+      title = "คุณขา - MaewBaew |Official Music Video|";
+      videoUrl = "https://www.youtube.com/embed/ZM7K2K7aiwE";
+      thumbnail = "https://img.youtube.com/vi/ZM7K2K7aiwE/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #8
+    if (category === PortfolioCategory.ARRANGEMENT && i === 7) {
+      title = "【Thai ver.】Lulala! Lululala! - Ciaccona (Wuthering Waves)【covered by Noyashi】";
+      videoUrl = "https://www.youtube.com/embed/F6vl4uDW_cE";
+      thumbnail = "https://img.youtube.com/vi/F6vl4uDW_cE/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #9
+    if (category === PortfolioCategory.ARRANGEMENT && i === 8) {
+      title = "Partner Covered by TAKOPERO 🌸";
+      videoUrl = "https://www.youtube.com/embed/ZoD8q6f3pHk";
+      thumbnail = "https://img.youtube.com/vi/ZoD8q6f3pHk/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #10 as requested
+    if (category === PortfolioCategory.ARRANGEMENT && i === 9) {
+      title = "Haru - 晴る／ヨลシカ【Covered by Shishiou Seito】";
+      videoUrl = "https://www.youtube.com/embed/-IzktNhIlxY";
+      thumbnail = "https://img.youtube.com/vi/-IzktNhIlxY/maxresdefault.jpg";
+    }
+
     return {
       id: `${category.toLowerCase().replace(/\s+/g, '-')}-${i}`,
       title,
