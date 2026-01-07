@@ -97,11 +97,18 @@ export const generateMockPortfolio = (category: PortfolioCategory): PortfolioIte
       thumbnail = "https://img.youtube.com/vi/ilvtdVs_VsE/maxresdefault.jpg";
     }
 
-    // Set the specific project for Arrangement Work #4 as requested
+    // Set the specific project for Arrangement Work #4
     if (category === PortfolioCategory.ARRANGEMENT && i === 3) {
       title = "NONT TANONT - คืนที่หมาเต็มวัด ft.Singto Numchok Covered by Aki X Bishamon【 Cover Song 】🔥🐈‍⬛";
       videoUrl = "https://www.youtube.com/embed/GHxLr75Wv9U";
       thumbnail = "https://img.youtube.com/vi/GHxLr75Wv9U/maxresdefault.jpg";
+    }
+
+    // Set the specific project for Arrangement Work #5
+    if (category === PortfolioCategory.ARRANGEMENT && i === 4) {
+      title = "『Cover』Uchiage Hanabi DAOKO x Kenshi Yonezu By Sungeuns X Whyte Ch.【Forry】";
+      videoUrl = "https://www.youtube.com/embed/tVzMIIyqhX0";
+      thumbnail = "https://img.youtube.com/vi/tVzMIIyqhX0/maxresdefault.jpg";
     }
 
     return {
